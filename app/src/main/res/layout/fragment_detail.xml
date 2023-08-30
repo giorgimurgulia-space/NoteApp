@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_black"
+    android:paddingHorizontal="@dimen/dimen_24_dp"
+    android:paddingVertical="30dp">
+
+    <ImageView
+        android:id="@+id/back_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/shape_rectangle_background"
+        android:backgroundTint="@color/black"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:textColor="@color/white"
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:layout_marginTop="40dp"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/back_image"
+        tools:text="Title" />
+
+    <EditText
+        android:textColor="@color/white"
+        android:background="@null"
+        android:id="@+id/description_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/title_text"
+        tools:text="Description" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

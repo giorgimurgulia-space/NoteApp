@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_black"
+    android:paddingHorizontal="@dimen/dimen_24_dp"
+    android:paddingVertical="30dp">
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/notes_title"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="19dp"
+        app:layout_constraintBottom_toTopOf="@id/plus_image"
+        app:layout_constraintTop_toBottomOf="@id/title_text"
+        tools:listitem="@layout/layout_note_item" />
+
+    <ImageView
+        android:id="@+id/plus_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/shape_oval"
+        android:backgroundTint="@color/black"
+        android:scaleType="center"
+        android:src="@drawable/ic_plus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
